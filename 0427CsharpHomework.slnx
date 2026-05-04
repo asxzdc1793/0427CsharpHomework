@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="FarmerGame/FarmerGame.csproj" Id="010f575a-6eb1-4982-9081-607d14e7f650" />
+  <Project Path="Homework01/Homework01.csproj" />
+  <Project Path="Homework02/Homework02.csproj" />
+  <Project Path="Homework03/Homework03.csproj" Id="be09d235-34e9-41f4-b841-9084376c93de" />
+</Solution>
