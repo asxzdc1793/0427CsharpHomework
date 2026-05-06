@@ -53,8 +53,8 @@ namespace FarmerGame
         {
             if (listBox1.SelectedItem != null)
             {
-                string item = (string)listBox1.SelectedItem;
-                int recordCount = (item == "農夫") ? 1 : 2;
+                var item = (string)listBox1.SelectedItem;
+                var recordCount = (item == "農夫") ? 1 : 2;
                 _history.Push((new List<string>(_List1), new List<string>(_List2), recordCount));
                 _List1.Remove(item);
                 _List2.Add(item);
@@ -85,8 +85,8 @@ namespace FarmerGame
         {
             if (listBox2.SelectedItem != null)
             {
-                string item = (string)listBox2.SelectedItem;
-                int recordCount = (item == "農夫") ? 1 : 2;
+                var item = (string)listBox2.SelectedItem;
+                var recordCount = (item == "農夫") ? 1 : 2;
                 _history.Push((new List<string>(_List1), new List<string>(_List2), recordCount));
                 _List2.Remove(item);
                 _List1.Add(item);
