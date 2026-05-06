@@ -32,6 +32,19 @@
             Console.WriteLine("──────────────────────");
 
             Console.WriteLine("請輸入整數(用,分隔)");
+            // 先排序，讓每個群組內的數字已經是有序的，不需要在 Select 裡再 OrderBy
+            var orderedResult = Console.ReadLine().Split(",").Select(int.Parse).OrderBy(x => x);
+
+            // GroupBy(n => n % 2 == 0) → 依偶數條件分組，Key = true 為偶數，false 為奇數
+            var groupedResult = orderedResult.GroupBy(n => n % 2 == 0);
+
+            var result = string.Join(Environment.NewLine,
+                groupedResult.Select(gp => $"{(gp.Key == true ? "偶數:" : "奇數:")} {string.Join(",", gp)}"));
+            Console.WriteLine(result);
+
+            Console.WriteLine("──────────────────────");
+
+            Console.WriteLine("請輸入整數(用,分隔)");
             // ── ToLookup 寫法：建立分類字典 ──────────────────────────────
             // ToLookup(x => x % 2) → 依餘數分類，key 為 0（偶數）或 1（奇數）
             var numbers4 = Console.ReadLine().Split(",").Select(int.Parse).ToList();
