@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("輸入一個整數:");
+            Console.Write("輸入一個整數:");
 
             // 將輸入的字串轉換為整數
             int n = int.Parse(Console.ReadLine());
