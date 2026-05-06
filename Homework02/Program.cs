@@ -7,7 +7,7 @@
             Console.Write("輸入一個整數:");
 
             // 將輸入的字串轉換為整數
-            int n = int.Parse(Console.ReadLine());
+            var n = int.Parse(Console.ReadLine());
 
             // ── 原始寫法：for 迴圈 + Enumerable.Repeat ──────────────────
             // i 從 0 跑到 n-1，每圈產生一行結果
@@ -15,7 +15,7 @@
             // i + 1     → 重複的次數（1, 2, 3, 4, 5）
             // Repeat    → LINQ 方法，產生重複元素的序列
             // Join("")  → 把序列合併成字串（不加分隔符號）
-            for (int i = 0; i < n; i++)
+            for (var i = 0; i < n; i++)
             {
                 string result = String.Join("", Enumerable.Repeat(n - i, i + 1));
                 Console.WriteLine(result);
@@ -33,6 +33,7 @@
             // 逐行輸出結果
             foreach (var line in lines)
                 Console.WriteLine(line);
+            Console.ReadLine();
         }
     }
 }

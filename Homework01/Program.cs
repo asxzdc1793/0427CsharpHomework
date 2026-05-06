@@ -14,6 +14,8 @@
             // 使用 LINQ 的 Reverse() 反轉陣列順序，再用 Join 合併回逗號分隔的字串，直接輸出
             // 例如：["12", "18", "13", "23", "32"] → "32,23,13,18,12"
             Console.WriteLine(string.Join(',', input.Reverse()));
+            Console.ReadLine();
+            
         }
     }
 }
